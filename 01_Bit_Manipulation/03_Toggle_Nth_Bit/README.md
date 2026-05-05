@@ -24,3 +24,4 @@ Final Register   : 0x00
 ## Output
 Before toggling bit: 0x08
 After toggling bit 3: 0x00
+![alt text](output.png)
