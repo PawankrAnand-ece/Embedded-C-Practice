@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdint.h>
 
-#define RX_BUFFER_SIZE 20
+#define RX_BUFFER_SIZE 32
 
 void uart_receive_byte(char rx_buffer[], uint8_t *index, char received_byte)
 {
@@ -18,7 +18,7 @@ int main(void)
     char rx_buffer[RX_BUFFER_SIZE];
     uint8_t rx_index = 0;
 
-    char incoming_data[] = "LEDON";
+    char incoming_data[] = "PAWAN KUMAR ANAND";
     uint8_t i;
 
     rx_buffer[0] = '\0';

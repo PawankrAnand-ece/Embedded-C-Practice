@@ -8,13 +8,13 @@ UART receives one byte at a time. Firmware stores each byte into a buffer until 
 
 ## Example
 Incoming Data:
-LEDON
+PAWAN KUMAR ANAND
 
 Received sequence:
-L -> E -> D -> O -> N
+P ->A ->W ->A ->N ->->K ->U ->M ->A ->R -> ->A ->N ->A ->N ->D
 
 Final Buffer:
-LEDON
+PAWAN KUMAR ANAND
 
 ## Why Null Character is Used
 In C, strings must end with `\0`.  
@@ -33,10 +33,22 @@ The program stores data only until `RX_BUFFER_SIZE - 1` so that one byte is alwa
 ## Output
 Receiving UART data byte by byte...
 
-Received Byte: L | Buffer: L  
-Received Byte: E | Buffer: LE  
-Received Byte: D | Buffer: LED  
-Received Byte: O | Buffer: LEDO  
-Received Byte: N | Buffer: LEDON  
+Received Byte: P | Buffer: P
+Received Byte: A | Buffer: PA
+Received Byte: W | Buffer: PAW
+Received Byte: A | Buffer: PAWA
+Received Byte: N | Buffer: PAWAN
+Received Byte:   | Buffer: PAWAN 
+Received Byte: K | Buffer: PAWAN K
+Received Byte: U | Buffer: PAWAN KU
+Received Byte: M | Buffer: PAWAN KUM
+Received Byte: A | Buffer: PAWAN KUMA
+Received Byte: R | Buffer: PAWAN KUMAR
+Received Byte:   | Buffer: PAWAN KUMAR 
+Received Byte: A | Buffer: PAWAN KUMAR A
+Received Byte: N | Buffer: PAWAN KUMAR AN
+Received Byte: A | Buffer: PAWAN KUMAR ANA
+Received Byte: N | Buffer: PAWAN KUMAR ANAN
+Received Byte: D | Buffer: PAWAN KUMAR ANAND
 
-Final Received Command: LEDON
+Final Received Command: PAWAN KUMAR ANAND
